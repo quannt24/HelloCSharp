@@ -5,9 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloMVVM"
         xmlns:views="clr-namespace:HelloMVVM.View"
+        xmlns:viewmodel="clr-namespace:HelloMVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <viewmodel:TextViewModel x:Key="textViewModel"/>
+    </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <views:StudentView x:Name = "StudentViewControl" Loaded = "StudentViewControl_Loaded"/>
+        <TextBox Width="100" Grid.Column="1" Text="{Binding Source={StaticResource textViewModel}, Path=DummyText}"/>
     </Grid>
 </Window>

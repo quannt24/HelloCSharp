@@ -10,7 +10,8 @@
 
     <Grid>
         <cefSharp:ChromiumWebBrowser x:Name="chromiumWebBrowser" Grid.Row="0" IsBrowserInitializedChanged="onBrowserInitializedChanged"/>
-        <Canvas x:Name="canvas" Height="271" VerticalAlignment="Top" Margin="77,19,139,0" Opacity="0.5" Background="#33000000" DragOver="canvasOnDragOver" MouseDown="canvasOnMouseDown" MouseMove="canvasOnMouseMove" MouseUp="canvasOnMouseUp">
+        <Canvas x:Name="canvas" Height="271" VerticalAlignment="Top" Margin="77,19,139,0" Background="#33000000" DragOver="canvasOnDragOver" MouseDown="canvasOnMouseDown" MouseMove="canvasOnMouseMove" MouseUp="canvasOnMouseUp">
+            <Rectangle></Rectangle>
             <Rectangle x:Name="rec" Fill="Blue" Canvas.Left="50" Canvas.Top="50" Width="200" Height="50" Canvas.ZIndex="99" MouseDown="recOnMouseDown" />
         </Canvas>
     </Grid>
